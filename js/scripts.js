@@ -6,7 +6,7 @@
 // }
 
 
-function Question(title, question, image, label, answer) {
+function Puzzle(title, question, image, label, answer) {
   this.title = title;
   this.question = question;
   this.image = image;
@@ -35,10 +35,10 @@ Answer.prototype.compare = function (currentPuzzle) {
   }
 }
 
-var puzzleQ1 = new Question("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", 3);
+var puzzleQ1 = new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", 3);
 // var puzzleA1 = new Answer(3)
 
-// var puzzleQ2 = new Question('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
+// var puzzleQ2 = new Puzzle('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
 // var puzzleAnswer4 = new Answer(BOOLEAN);
 
 
@@ -60,10 +60,10 @@ $(document).ready(function() {
       var currentAnswer = new Answer(parseInt($("#answer").val()));
 
       if (currentAnswer.compare(puzzleQ1)) {
-        $(".puzzle").hide();
-        // console.log(correctAnswer);
+        $("#puzzle").delay(3000).fadeOut();
         $(".two").fadeIn();
         $("#response").text("Excellent. You Proceed!");
+
       } else {
         $("#response").text("Sorry Viking. You cannot proceed with that response.");
       }
