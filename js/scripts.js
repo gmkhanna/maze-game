@@ -241,7 +241,7 @@ $(document).ready(function() {
   })
   $("button#r4c1-right").click(function() {
     $(".nineteen").fadeOut();
-    $(".").fadeIn();
+    $(".twenty").fadeIn();
   })
   $("button#r4c1-up").click(function() {
     $(".nineteen").fadeOut();
