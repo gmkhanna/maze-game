@@ -1,9 +1,20 @@
-.puzzleTitle {
+#puzzle1Title {
   cursor: pointer;
 
 }
 
-.puzzleTitle:hover {
+#puzzle1Title:hover {
+  text-decoration: underline;
+  color: #0088cc;
+  display: block;
+}
+
+#puzzle2Title {
+  cursor: pointer;
+
+}
+
+#puzzle2Title:hover {
   text-decoration: underline;
   color: #0088cc;
   display: block;

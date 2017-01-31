@@ -5,3 +5,13 @@ Which figure should be placed in the empty triangle?
 This puzzle works your executive functions in your frontal lobes by using your pattern recognition, hypothesis testing, and logic. Let us know how you do!
 
 ANSWER: 3
+
+
+// var puzzleQ2 = new Question('Question: Which one of the five choices makes the best comparison? OCTOPUS is to SUPOTCO as 462517 is to:');
+// var puzzleAnswer2 = new Answer(715264);
+//
+// var puzzleQ3 = new Question('Which larger shape would be made if the two sections are fitted together?');
+// var puzzleAnswer2 = new Answer(AN IMAGE);
+//
+// var puzzleQ4 = new Question('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?')
+// var puzzleAnswer4 = new Answer(BOOLEAN);
