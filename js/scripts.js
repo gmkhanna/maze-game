@@ -6,15 +6,16 @@
 // }
 
 
-function Question(title, question, image, label) {
+function Question(title, question, image, label, answer) {
   this.title = title;
   this.question = question;
   this.image = image;
   this.questionLabel = label;
+  this.questionAnswer = answer;
 }
 
 function Answer(answer) {
-  this.answer = answer;
+  this.userAnswer = answer;
 }
 
 // Question.prototype.puzQuestion = function () {
@@ -24,18 +25,20 @@ function Answer(answer) {
 //   return this.questionLabel;
 // }
 
-Answer.prototype.puzAnswer = function () {
-  if (this.answer !== 3){
-  return "Sorry Viking. You cannot proceed with that response.";
-} else {
-  return "Excellent. You Proceed!"
+Answer.prototype.compare = function (currentPuzzle) {
+  if (this.userAnswer === currentPuzzle.questionAnswer){ //if they get it right
+    return true;
+    // "Excellent. You Proceed!"
+  } else { //if they get it wrong
+    return false;
+    // "Sorry Viking. You cannot proceed with that response.";
   }
 }
 
-var puzzleQ1 = new Question("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!");
+var puzzleQ1 = new Question("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", 3);
 // var puzzleA1 = new Answer(3)
 
-var puzzleQ2 = new Question('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
+// var puzzleQ2 = new Question('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
 // var puzzleAnswer4 = new Answer(BOOLEAN);
 
 
@@ -51,15 +54,18 @@ $(document).ready(function() {
     $("#question").text(puzzleQuestion.question);
     $("#question").append(puzzleQuestion.image);
     $("#label").text(puzzleQuestion.questionLabel);
+
     $("form").submit(function(event) {
       event.preventDefault();
-      var userAnswer = parseInt($("#answer").val());
-      var correctAnswer = new Answer(userAnswer);
-      if (userAnswer === 3) {
+      var currentAnswer = new Answer(parseInt($("#answer").val()));
+
+      if (currentAnswer.compare(puzzleQ1)) {
         $(".puzzle").hide();
-        console.log(correctAnswer);
+        // console.log(correctAnswer);
         $(".two").fadeIn();
-        $("#response").text(correctAnswer.puzAnswer)
+        $("#response").text("Excellent. You Proceed!");
+      } else {
+        $("#response").text("Sorry Viking. You cannot proceed with that response.");
       }
     });
   }
