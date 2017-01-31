@@ -153,330 +153,330 @@ $(document).ready(function() {
   })
   $("button#r3c1-right").click(function() {
     $(".thirteen").fadeOut();
-    $(".eight").fadeIn();
+    $(".fourteen").fadeIn();
   })
   $("button#r3c1-up").click(function() {
     $(".thirteen").fadeOut();
-    $(".one").fadeIn();
+    $(".seven").fadeIn();
   })
   $("button#r3c1-down").click(function() {
     $(".thirteen").fadeOut();
-    $(".thirteen").fadeIn();
+    $(".nineteen").fadeIn();
   })
   $("button#r3c2-right").click(function() {
     $(".fourteen").fadeOut();
-    $(".nine").fadeIn();
+    $(".fifteen").fadeIn();
   })
   $("button#r3c2-left").click(function() {
     $(".fourteen").fadeOut();
-    $(".seven").fadeIn();
+    $(".thirteen").fadeIn();
   })
   $("button#r3c2-up").click(function() {
     $(".fourteen").fadeOut();
-    $(".two").fadeIn();
+    $(".eight").fadeIn();
   })
   $("button#r3c2-down").click(function() {
     $(".fourteen").fadeOut();
-    $(".fourteen").fadeIn();
+    $(".twenty").fadeIn();
   })
   $("button#r3c3-right").click(function() {
     $(".fifteen").fadeOut();
-    $(".ten").fadeIn();
+    $(".sixteen").fadeIn();
   })
   $("button#r3c3-left").click(function() {
     $(".fifteen").fadeOut();
-    $(".eight").fadeIn();
+    $(".fourteen").fadeIn();
   })
   $("button#r3c3-up").click(function() {
     $(".fifteen").fadeOut();
-    $(".three").fadeIn();
+    $(".nine").fadeIn();
   })
   $("button#r3c3-down").click(function() {
     $(".fifteen").fadeOut();
-    $(".fifteen").fadeIn();
+    $(".twenty-one").fadeIn();
   })
   $("button#r3c4-right").click(function() {
     $(".sixteen").fadeOut();
-    $(".eleven").fadeIn();
+    $(".seventeen").fadeIn();
   })
   $("button#r3c4-left").click(function() {
     $(".sixteen").fadeOut();
-    $(".nine").fadeIn();
+    $(".fifteen").fadeIn();
   })
   $("button#r3c4-up").click(function() {
     $(".sixteen").fadeOut();
-    $(".four").fadeIn();
+    $(".ten").fadeIn();
   })
   $("button#r3c4-down").click(function() {
     $(".sixteen").fadeOut();
-    $(".sixteen").fadeIn();
+    $(".twenty-two").fadeIn();
   })
   $("button#r3c5-right").click(function() {
     $(".seventeen").fadeOut();
-    $(".twelve").fadeIn();
+    $(".eighteen").fadeIn();
   })
   $("button#r3c5-left").click(function() {
     $(".seventeen").fadeOut();
-    $(".ten").fadeIn();
+    $(".sixteen").fadeIn();
   })
   $("button#r3c5-up").click(function() {
     $(".seventeen").fadeOut();
-    $(".five").fadeIn();
+    $(".eleven").fadeIn();
   })
   $("button#r3c5-down").click(function() {
     $(".eighteen").fadeOut();
-    $(".seventeen").fadeIn();
+    $(".twenty-three").fadeIn();
   })
   $("button#r3c6-left").click(function() {
     $(".eighteen").fadeOut();
-    $(".eleven").fadeIn();
+    $(".seventeen").fadeIn();
   })
   $("button#r3c6-up").click(function() {
     $(".eighteen").fadeOut();
-    $(".six").fadeIn();
+    $(".twelve").fadeIn();
   })
   $("button#r3c6-down").click(function() {
     $(".eighteen").fadeOut();
-    $(".eighteen").fadeIn();
+    $(".twenty-four").fadeIn();
   })
   $("button#r4c1-right").click(function() {
-    $(".ninteen").fadeOut();
-    $(".eight").fadeIn();
+    $(".nineteen").fadeOut();
+    $(".").fadeIn();
   })
   $("button#r4c1-up").click(function() {
-    $(".ninteen").fadeOut();
-    $(".one").fadeIn();
+    $(".nineteen").fadeOut();
+    $(".thirteen").fadeIn();
   })
   $("button#r4c1-down").click(function() {
-    $(".ninteen").fadeOut();
-    $(".thirteen").fadeIn();
+    $(".nineteen").fadeOut();
+    $(".twenty-five").fadeIn();
   })
   $("button#r4c2-right").click(function() {
     $(".twenty").fadeOut();
-    $(".nine").fadeIn();
+    $(".twenty-one").fadeIn();
   })
   $("button#r4c2-left").click(function() {
     $(".twenty").fadeOut();
-    $(".seven").fadeIn();
+    $(".nineteen").fadeIn();
   })
   $("button#r4c2-up").click(function() {
     $(".twenty").fadeOut();
-    $(".two").fadeIn();
+    $(".fourteen").fadeIn();
   })
   $("button#r4c2-down").click(function() {
     $(".twenty").fadeOut();
-    $(".fourteen").fadeIn();
+    $(".twenty-six").fadeIn();
   })
   $("button#r4c3-right").click(function() {
     $(".twenty-one").fadeOut();
-    $(".ten").fadeIn();
+    $(".twenty-two").fadeIn();
   })
   $("button#r4c3-left").click(function() {
     $(".twenty-one").fadeOut();
-    $(".eight").fadeIn();
+    $(".twenty").fadeIn();
   })
   $("button#r4c3-up").click(function() {
     $(".twenty-one").fadeOut();
-    $(".three").fadeIn();
+    $(".fifteen").fadeIn();
   })
   $("button#r4c3-down").click(function() {
     $(".twenty-one").fadeOut();
-    $(".fifteen").fadeIn();
+    $(".twenty-seven").fadeIn();
   })
   $("button#r4c4-right").click(function() {
     $(".twenty-two").fadeOut();
-    $(".eleven").fadeIn();
+    $(".twenty-three").fadeIn();
   })
   $("button#r4c4-left").click(function() {
     $(".twenty-two").fadeOut();
-    $(".nine").fadeIn();
+    $(".twenty-one").fadeIn();
   })
   $("button#r4c4-up").click(function() {
     $(".twenty-two").fadeOut();
-    $(".four").fadeIn();
+    $(".sixteen").fadeIn();
   })
   $("button#r4c4-down").click(function() {
     $(".twenty-two").fadeOut();
-    $(".sixteen").fadeIn();
+    $(".twenty-eight").fadeIn();
   })
   $("button#r4c5-right").click(function() {
     $(".twenty-three").fadeOut();
-    $(".twelve").fadeIn();
+    $(".twenty-four").fadeIn();
   })
   $("button#r4c5-left").click(function() {
     $(".twenty-three").fadeOut();
-    $(".ten").fadeIn();
+    $(".twenty-two").fadeIn();
   })
   $("button#r4c5-up").click(function() {
     $(".twenty-three").fadeOut();
-    $(".five").fadeIn();
+    $(".seventeen").fadeIn();
   })
   $("button#r4c5-down").click(function() {
     $(".twenty-three").fadeOut();
-    $(".seventeen").fadeIn();
+    $(".twenty-nine").fadeIn();
   })
   $("button#r4c6-left").click(function() {
     $(".twenty-four").fadeOut();
-    $(".eleven").fadeIn();
+    $(".twenty-three").fadeIn();
   })
   $("button#r4c6-up").click(function() {
     $(".twenty-four").fadeOut();
-    $(".six").fadeIn();
+    $(".eighteen").fadeIn();
   })
   $("button#r4c6-down").click(function() {
     $(".twenty-four").fadeOut();
-    $(".eighteen").fadeIn();
+    $(".thirty").fadeIn();
   })
   $("button#r5c1-right").click(function() {
     $(".twenty-five").fadeOut();
-    $(".eight").fadeIn();
+    $(".twenty-six").fadeIn();
   })
   $("button#r5c1-up").click(function() {
     $(".twenty-five").fadeOut();
-    $(".one").fadeIn();
+    $(".nineteen").fadeIn();
   })
   $("button#r5c1-down").click(function() {
     $(".twenty-five").fadeOut();
-    $(".thirteen").fadeIn();
+    $(".thirty-one").fadeIn();
   })
   $("button#r5c2-right").click(function() {
     $(".twenty-six").fadeOut();
-    $(".nine").fadeIn();
+    $(".twenty-seven").fadeIn();
   })
   $("button#r5c2-left").click(function() {
     $(".twenty-six").fadeOut();
-    $(".seven").fadeIn();
+    $(".twenty-five").fadeIn();
   })
   $("button#r5c2-up").click(function() {
     $(".twenty-six").fadeOut();
-    $(".two").fadeIn();
+    $(".twenty").fadeIn();
   })
   $("button#r5c2-down").click(function() {
     $(".twenty-six").fadeOut();
-    $(".fourteen").fadeIn();
+    $(".thirty-two").fadeIn();
   })
   $("button#r5c3-right").click(function() {
     $(".twenty-seven").fadeOut();
-    $(".ten").fadeIn();
+    $(".twenty-eight").fadeIn();
   })
   $("button#r5c3-left").click(function() {
     $(".twenty-seven").fadeOut();
-    $(".eight").fadeIn();
+    $(".twenty-six").fadeIn();
   })
   $("button#r5c3-up").click(function() {
     $(".twenty-seven").fadeOut();
-    $(".three").fadeIn();
+    $(".twenty-one").fadeIn();
   })
   $("button#r5c3-down").click(function() {
     $(".twenty-seven").fadeOut();
-    $(".fifteen").fadeIn();
+    $(".thirty-three").fadeIn();
   })
   $("button#r5c4-right").click(function() {
     $(".twenty-eight").fadeOut();
-    $(".eleven").fadeIn();
+    $(".twenty-nine").fadeIn();
   })
   $("button#r5c4-left").click(function() {
     $(".twenty-eight").fadeOut();
-    $(".nine").fadeIn();
+    $(".twenty-seven").fadeIn();
   })
   $("button#r5c4-up").click(function() {
     $(".twenty-eight").fadeOut();
-    $(".four").fadeIn();
+    $(".twenty-two").fadeIn();
   })
   $("button#r5c4-down").click(function() {
     $(".twenty-eight").fadeOut();
-    $(".sixteen").fadeIn();
+    $(".thirty-four").fadeIn();
   })
   $("button#r5c5-right").click(function() {
     $(".twenty-nine").fadeOut();
-    $(".twelve").fadeIn();
+    $(".thirty").fadeIn();
   })
   $("button#r5c5-left").click(function() {
     $(".twenty-nine").fadeOut();
-    $(".ten").fadeIn();
+    $(".twenty-eight").fadeIn();
   })
   $("button#r5c5-up").click(function() {
     $(".twenty-nine").fadeOut();
-    $(".five").fadeIn();
+    $(".twenty-three").fadeIn();
   })
   $("button#r5c5-down").click(function() {
     $(".twenty-nine").fadeOut();
-    $(".seventeen").fadeIn();
+    $(".thirty-five").fadeIn();
   })
   $("button#r5c6-left").click(function() {
     $(".thirty").fadeOut();
-    $(".eleven").fadeIn();
+    $(".twenty-nine").fadeIn();
   })
   $("button#r5c6-up").click(function() {
     $(".thirty").fadeOut();
-    $(".six").fadeIn();
+    $(".twenty-four").fadeIn();
   })
   $("button#r5c6-down").click(function() {
     $(".thirty").fadeOut();
-    $(".eighteen").fadeIn();
+    $(".thirty-six").fadeIn();
   })
   $("button#r6c1-right").click(function() {
     $(".thirty-one").fadeOut();
-    $(".two").fadeIn();
+    $(".thirty-two").fadeIn();
   })
   $("button#r6c1-up").click(function() {
     $(".thirty-one").fadeOut();
-    $(".seven").fadeIn();
+    $(".twenty-five").fadeIn();
   })
   $("button#r6c2-right").click(function() {
     $(".thirty-two").fadeOut();
-    $(".three").fadeIn();
+    $(".thirty-three").fadeIn();
   })
   $("button#r6c2-left").click(function() {
     $(".thirty-two").fadeOut();
-    $(".one").fadeIn();
+    $(".thirty-one").fadeIn();
   })
   $("button#r6c2-up").click(function() {
     $(".thirty-two").fadeOut();
-    $(".eight").fadeIn();
+    $(".twenty-six").fadeIn();
   })
   $("button#r6c3-right").click(function() {
     $(".thirty-three").fadeOut();
-    $(".four").fadeIn();
+    $(".thirty-four").fadeIn();
   })
   $("button#r6c3-left").click(function() {
     $(".thirty-three").fadeOut();
-    $(".two").fadeIn();
+    $(".thirty-two").fadeIn();
   })
   $("button#r6c3-up").click(function() {
     $(".thirty-three").fadeOut();
-    $(".nine").fadeIn();
+    $(".twenty-seven").fadeIn();
   })
   $("button#r6c4-right").click(function() {
     $(".thirty-four").fadeOut();
-    $(".five").fadeIn();
+    $(".thirty-five").fadeIn();
   })
   $("button#r6c4-left").click(function() {
     $(".thirty-four").fadeOut();
-    $(".three").fadeIn();
+    $(".thirty-three").fadeIn();
   })
   $("button#r6c4-up").click(function() {
     $(".thirty-four").fadeOut();
-    $(".ten").fadeIn();
+    $(".twenty-eight").fadeIn();
   })
   $("button#r6c5-right").click(function() {
     $(".thirty-five").fadeOut();
-    $(".six").fadeIn();
+    $(".thirty-six").fadeIn();
   })
   $("button#r6c5-left").click(function() {
     $(".thirty-five").fadeOut();
-    $(".four").fadeIn();
+    $(".thirty-four").fadeIn();
   })
   $("button#r6c5-up").click(function() {
     $(".thirty-five").fadeOut();
-    $(".eleven").fadeIn();
+    $(".twenty-nine").fadeIn();
   })
   $("button#r6c6-left").click(function() {
     $(".thirty-six").fadeOut();
-    $(".five").fadeIn();
+    $(".thirty-five").fadeIn();
   })
   $("button#r6c6-up").click(function() {
     $(".thirty-six").fadeOut();
-    $(".twelve").fadeIn();
+    $(".thirty").fadeIn();
   })
 })
