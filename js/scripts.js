@@ -237,6 +237,10 @@ $(document).ready(function() {
     $(".eleven").fadeIn();
   })
   $("button#r3c5-down").click(function() {
+    $(".seventeen").fadeOut();
+    $(".twenty-three").fadeIn();
+  })
+  $("button#r3c5-down").click(function() {
     $(".eighteen").fadeOut();
     $(".twenty-three").fadeIn();
   })
@@ -479,6 +483,7 @@ $(document).ready(function() {
   $("button#r6c5-left").click(function() {
     $(".thirty-five").fadeOut();
     $(".thirty-four").fadeIn();
+    $(".win").show();
   })
   $("button#r6c5-up").click(function() {
     $(".thirty-five").fadeOut();
