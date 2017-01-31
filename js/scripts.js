@@ -1,7 +1,20 @@
 $(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+
+    var answer = parseInt($("#answer").val());
+
+    if (answer === 5) {
+      $(".puzzle").hide();
+      $(".two").fadeIn();
+    } else {
+      alert('Try Again!')
+    }
+  })
+
   $("button#r1c1-right").click(function() {
     $(".one").fadeOut();
-    $(".two").fadeIn();
+    $(".puzzle").show();
   })
   $("button#r1c1-down").click(function() {
     $(".one").fadeOut();
