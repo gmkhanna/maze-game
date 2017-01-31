@@ -1,3 +1,4 @@
+
 .jumbotron {
   text-align: center;
 }
@@ -24,4 +25,27 @@ img {
 
 .puzzle, .win {
   display: none;
+}  
+  
+#puzzle1Title {
+  cursor: pointer;
+
+}
+
+#puzzle1Title:hover {
+  text-decoration: underline;
+  color: #0088cc;
+  display: block;
+}
+
+#puzzle2Title {
+  cursor: pointer;
+
+}
+
+#puzzle2Title:hover {
+  text-decoration: underline;
+  color: #0088cc;
+  display: block;
+
 }
