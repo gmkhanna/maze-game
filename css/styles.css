@@ -1,6 +1,19 @@
-
+#map {
+  background-image: url('../img/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
 .jumbotron {
-  text-align: center;
+  text-align: right;
+  background-color: #373028;
+  color: #000000;
+  background-image: url(../img/snow.gif);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+}
+
+.row {
+  margin: 0px;
 }
 
 img {

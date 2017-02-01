@@ -1,10 +1,4 @@
-
-// function Puzzle(question) {
-//   this.question = question;
-//   this.image = puzzle1Img;
-//   this.answer = answer;
-// }
-
+// Business logic
 
 function Puzzle(title, question, image, label, answer) {
   this.title = title;
@@ -18,34 +12,19 @@ function Answer(answer) {
   this.userAnswer = answer;
 }
 
-// Question.prototype.puzQuestion = function () {
-//   return this.title;
-//   return this.question;
-//   return this.image;
-//   return this.questionLabel;
-// }
-
 Answer.prototype.compare = function (currentPuzzle) {
-  if (this.userAnswer === currentPuzzle.questionAnswer){ //if they get it right
+  if (this.userAnswer === currentPuzzle.questionAnswer) {
     return true;
-    // "Excellent. You Proceed!"
-  } else { //if they get it wrong
+  } else {
     return false;
-    // "Sorry Viking. You cannot proceed with that response.";
   }
 }
 
 var puzzleQ1 = new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", 3);
-// var puzzleA1 = new Answer(3)
 
 // var puzzleQ2 = new Puzzle('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
-// var puzzleAnswer4 = new Answer(BOOLEAN);
 
-
-// var puzzleAnswer1 = new Answer(3);
-// var puzzle1Img = new Image();
-
-
+// User logic
 $(document).ready(function() {
   function puzzleQuestion(puzzleQuestion) {
     $("#puzzle").show();
@@ -60,7 +39,7 @@ $(document).ready(function() {
       var currentAnswer = new Answer(parseInt($("#answer").val()));
 
       if (currentAnswer.compare(puzzleQ1)) {
-        $("#puzzle").delay(3000).fadeOut();
+        $("#puzzle").delay(2000).fadeOut();
         $(".two").fadeIn();
         $("#response").text("Excellent. You Proceed!");
 
@@ -74,16 +53,10 @@ $(document).ready(function() {
 
   });
 
-        $(".puzzle1Input").click(function() {
-    alert("I was found by JQuery");
-  })
-
-
-
-  $("#puzzle2Title").click(function() {
-    $("#puzzle2Start").text(puzzleQ2.puzQuestion());
-    $("#puzzle2Start").append(puzzleQ2.image);
-  });
+  // $("#puzzle2Title").click(function() {
+  //   $("#puzzle2Start").text(puzzleQ2.puzQuestion());
+  //   $("#puzzle2Start").append(puzzleQ2.image);
+  // });
 
 
 
@@ -92,23 +65,7 @@ $(document).ready(function() {
     return puzzleQuestion(puzzleQ1);
 
   });
-    // $(".one").fadeOut();
-    // $("#puzzle").show();
-    // $("#title").text(puzzleQuestion.title);
-    // $("#question").text(puzzleQuestion.question);
-    // $("#question").append(puzzleQuestion.image);
-    // $("#label").text(puzzleQuestion.questionLabel);
-    // $("form").submit(function(event) {
-    //   event.preventDefault();
-    //   var userAnswer = parseInt($("#answer").val());
-    //   var correctAnswer = new Answer(userAnswer);
-    //   if (userAnswer === 3) {
-    //     $(".puzzle").hide();
-    //     console.log(correctAnswer);
-    //     $(".two").fadeIn();
-    //     $("#response").text(correctAnswer.puzAnswer)
-    //   }
-    // });
+
   $("button#r1c1-down").click(function() {
     $(".one").fadeOut();
     $(".seven").fadeIn();
