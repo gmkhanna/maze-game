@@ -547,4 +547,5 @@ $(document).ready(function() {
     $(".thirty-six").fadeOut();
     $(".thirty").fadeIn();
   })
+
 })
