@@ -76,6 +76,13 @@ new Radio('Kneeling', 'Viking is devout. Sometimes he needs strength in his time
 
 new Radio("Pyramid Thatch", "The roof of Viking's longhouse is leaking. To orient his thatch correctly, which image shows the top view of his pyramid style thatch?", '<br>' + "<img " + "src='img/pyramid-view.jpeg'" + '>', "A)", "B)", "C)", "D)", "2");
 
+new Radio("Animal Strength", "Viking is going through a relentless battle, but the gods are on his side. He wears the pelt of an animal for strength, but he needs the gods to grant him more strength. Which animal strength is granted to him for the fight?", '<br>' + "<img " + "src='img/wolf-pelt.jpg'" + '>', "Raven", "Bear", "Wolf", "Lion", "2");
+
+new Radio("Intimidation", "The lines of battle are severe. Viking needs as much strategy to intimidate his opponenet. How does he do so?", '<br>' + "<img " + "src='img/warcry.jpg'" + '>', "Dye his body", "File his teeth into sharp fangs as extra weapons", "Shaved his head", "Clipped his ears", "0");
+
+new Radio("Fight Diet", "In full battle preparation, viking eats this to be under the optimum influence (this has not been found in actual evidence, but there are notes of it in writings).", '<br>' + "<img " + "src='img/vikingImages.jpg'" + '>', "Raw Meat", "Mushrooms", "Fermented Grapes", "Animal Insides", "2");
+
+
 // User logic
 $(document).ready(function() {
   function puzzleQuestion(puzzleQuestion) {
