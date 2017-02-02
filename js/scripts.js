@@ -49,11 +49,13 @@ Answer.prototype.compare = function (currentPuzzle) {
 
 
 
-var puzzleQ1 = new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
+new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
 
-var puzzleQ2 = new Puzzle("Docking Spot", "Question: In what dock number is the faering docked?", "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'benzla', '87');
+new Puzzle("Docking Spot", "Question: In what dock number is the faering docked?", "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'benzla', '87');
 
-var puzzleQ3 = new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
+new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
+
+new Puzzle("Boat Maze", "Question: What exit will the faering leaving the harbor?", "<img " + "src='img/car-maze.jpg'" + ">", 'Enter', 'c');
 // var puzzleQ2 = new Puzzle('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
 
 
@@ -77,7 +79,7 @@ $(document).ready(function() {
         $('#radioResponse').hide();
         $('#response').show();
         $("#response").delay(2000).fadeOut();
-        $('#map').show();
+        $('#map').fadeIn(1500);
 
       } else {
         $("#response").text("Sorry Viking. You cannot proceed with that response.");
@@ -89,8 +91,8 @@ $(document).ready(function() {
 
   function radioQuestion(radioQuestion) {
     $("#radioSec").show();
+    $("#map").hide();
     $("#radioTitle").text(radioQuestion.title);
-    console.log(radioQuestion.title);
     $("#radioQuestion").text(radioQuestion.question);
     $("#radioQuestion").append(radioQuestion.image);
     $("#label0").text(radioQuestion.label0);
@@ -108,7 +110,7 @@ $(document).ready(function() {
         $('#response').hide();
         $('#radioResponse').show();
         $("#radioResponse").delay(2000).fadeOut();
-        $('#map').show();
+        $('#map').fadeIn(1500);
       } else {
         $("#radioResponse").text("Sorry Viking. You cannot proceed with that response.");
         $('#radioResponse').show();

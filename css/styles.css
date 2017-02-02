@@ -18,8 +18,9 @@
 }
 
 img {
-  width: 70%;
-  height: 70%;
+  margin-top: 10px;
+  width: 100%;
+  height: 90%;
 }
 
 #treasure {
