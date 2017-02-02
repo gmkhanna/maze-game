@@ -1,5 +1,5 @@
 body {
-  background-image: url('../img/background.jpg');
+  /*background-image: url('../img/background.jpg');*/
 }
 #map {
   background-image: url('../img/background2.jpg');
@@ -8,8 +8,8 @@ body {
 }
 .jumbotron {
   text-align: center;
-  background-color: #373028;
-  background: linear-gradient(#331b13, #373028);
+  /*background-color: #373028;*/
+  background: linear-gradient(#1D1715, #463E33);
 }
 
 .row {
