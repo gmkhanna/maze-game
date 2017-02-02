@@ -19,8 +19,11 @@
 
 img {
   margin-top: 10px;
-  width: 100%;
-  height: 90%;
+  width: 80%;
+}
+
+#puzzle img {
+  width: 50%;
 }
 
 #treasure {
