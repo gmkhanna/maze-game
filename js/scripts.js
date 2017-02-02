@@ -54,7 +54,7 @@ var puzzleQ3 = new Radio("No Food Reserves", "In a voyage to hunt for hide, you 
 $(document).ready(function() {
   function puzzleQuestion(puzzleQuestion) {
     $("#puzzle").show();
-    $('#map').hide();
+    $("#map").hide();
     $("#title").text(puzzleQuestion.title);
     $("#question").text(puzzleQuestion.question);
     $("#question").append(puzzleQuestion.image);
@@ -70,6 +70,7 @@ $(document).ready(function() {
         $('#response').show();
         $("#response").delay(2000).fadeOut();
         $('#map').show();
+
       } else {
         $("#response").text("Sorry Viking. You cannot proceed with that response.");
         $('#response').show();
@@ -122,19 +123,26 @@ $(document).ready(function() {
 
 
   $("button#r1c1-right").click(function () {
-    $(".one").fadeOut();
+
+    $(".one").fadeOut()
     radioQuestion(randomPuzzle());
-    $(".two").fadeIn();
+    $(".two").fadeIn()
+    $("#one").css("border-right", "none");
+    $("#two").css("border-left", "none");
 
   });
 
   $("button#r1c1-down").click(function() {
     $(".one").fadeOut();
     $(".seven").fadeIn();
+    $("#one").css("border-bottom", "none");
+    $("#seven").css("border-top", "none");
   })
   $("button#r1c2-right").click(function() {
     $(".two").fadeOut();
     $(".three").fadeIn();
+    $("#two").css("border-right", "none");
+    $("#three").css("border-left", "none");
   })
   $("button#r1c2-left").click(function() {
     $(".two").fadeOut();
@@ -143,10 +151,14 @@ $(document).ready(function() {
   $("button#r1c2-down").click(function() {
     $(".two").fadeOut();
     $(".eight").fadeIn();
+    $("#two").css("border-bottom", "none");
+    $("#eight").css("border-top", "none");
   })
   $("button#r1c3-right").click(function() {
     $(".three").fadeOut();
     $(".four").fadeIn();
+    $("#three").css("border-right", "none");
+    $("#four").css("border-left", "none");
   })
   $("button#r1c3-left").click(function() {
     $(".three").fadeOut();
@@ -159,6 +171,8 @@ $(document).ready(function() {
   $("button#r1c4-right").click(function() {
     $(".four").fadeOut();
     $(".five").fadeIn();
+    $("#four").css("border-right", "none");
+    $("#five").css("border-left", "none");
   })
   $("button#r1c4-left").click(function() {
     $(".four").fadeOut();
@@ -167,6 +181,8 @@ $(document).ready(function() {
   $("button#r1c4-down").click(function() {
     $(".four").fadeOut();
     $(".ten").fadeIn();
+    $("#four").css("border-bottom", "none");
+    $("#ten").css("border-top", "none");
   })
   $("button#r1c5-right").click(function() {
     $(".five").fadeOut();
@@ -179,6 +195,8 @@ $(document).ready(function() {
   $("button#r1c5-down").click(function() {
     $(".five").fadeOut();
     $(".eleven").fadeIn();
+    $("#five").css("border-bottom", "none");
+    $("#eleven").css("border-top", "none");
   })
   $("button#r1c6-left").click(function() {
     $(".six").fadeOut();
@@ -215,6 +233,8 @@ $(document).ready(function() {
   $("button#r2c2-down").click(function() {
     $(".eight").fadeOut();
     $(".fourteen").fadeIn();
+    $("#eight").css("border-bottom", "none");
+    $("#fourteen").css("border-top", "none");
   })
   $("button#r2c3-right").click(function() {
     $(".nine").fadeOut();
@@ -231,6 +251,8 @@ $(document).ready(function() {
   $("button#r2c3-down").click(function() {
     $(".nine").fadeOut();
     $(".fifteen").fadeIn();
+    $("#nine").css("border-bottom", "none");
+    $("#fifteen").css("border-top", "none");
   })
   $("button#r2c4-right").click(function() {
     $(".ten").fadeOut();
@@ -239,6 +261,8 @@ $(document).ready(function() {
   $("button#r2c4-left").click(function() {
     $(".ten").fadeOut();
     $(".nine").fadeIn();
+    $("#ten").css("border-left", "none");
+    $("#nine").css("border-right", "none");
   })
   $("button#r2c4-up").click(function() {
     $(".ten").fadeOut();
@@ -251,6 +275,8 @@ $(document).ready(function() {
   $("button#r2c5-right").click(function() {
     $(".eleven").fadeOut();
     $(".twelve").fadeIn();
+    $("#eleven").css("border-right", "none");
+    $("#twelve").css("border-left", "none");
   })
   $("button#r2c5-left").click(function() {
     $(".eleven").fadeOut();
@@ -271,6 +297,8 @@ $(document).ready(function() {
   $("button#r2c6-up").click(function() {
     $(".twelve").fadeOut();
     $(".six").fadeIn();
+    $("#twelve").css("border-top", "none");
+    $("#six").css("border-bottom", "none");
   })
   $("button#r2c6-down").click(function() {
     $(".twelve").fadeOut();
@@ -287,6 +315,8 @@ $(document).ready(function() {
   $("button#r3c1-down").click(function() {
     $(".thirteen").fadeOut();
     $(".nineteen").fadeIn();
+    $("#thirteen").css("border-bottom", "none");
+    $("#nineteen").css("border-top", "none");
   })
   $("button#r3c2-right").click(function() {
     $(".fourteen").fadeOut();
@@ -295,6 +325,8 @@ $(document).ready(function() {
   $("button#r3c2-left").click(function() {
     $(".fourteen").fadeOut();
     $(".thirteen").fadeIn();
+    $("#fourteen").css("border-left", "none");
+    $("#thirteen").css("border-right", "none");
   })
   $("button#r3c2-up").click(function() {
     $(".fourteen").fadeOut();
@@ -307,6 +339,8 @@ $(document).ready(function() {
   $("button#r3c3-right").click(function() {
     $(".fifteen").fadeOut();
     $(".sixteen").fadeIn();
+    $("#fifteen").css("border-right", "none");
+    $("#sixteen").css("border-left", "none");
   })
   $("button#r3c3-left").click(function() {
     $(".fifteen").fadeOut();
@@ -335,10 +369,14 @@ $(document).ready(function() {
   $("button#r3c4-down").click(function() {
     $(".sixteen").fadeOut();
     $(".twenty-two").fadeIn();
+    $("#sixteen").css("border-bottom", "none");
+    $("#twenty-two").css("border-top", "none");
   })
   $("button#r3c5-right").click(function() {
     $(".seventeen").fadeOut();
     $(".eighteen").fadeIn();
+    $("#seventeen").css("border-right", "none");
+    $("#eighteen").css("border-left", "none");
   })
   $("button#r3c5-left").click(function() {
     $(".seventeen").fadeOut();
@@ -367,6 +405,8 @@ $(document).ready(function() {
   $("button#r3c6-down").click(function() {
     $(".eighteen").fadeOut();
     $(".twenty-four").fadeIn();
+    $("#eighteen").css("border-bottom", "none");
+    $("#twenty-four").css("border-top", "none");
   })
   $("button#r4c1-right").click(function() {
     $(".nineteen").fadeOut();
@@ -379,10 +419,14 @@ $(document).ready(function() {
   $("button#r4c1-down").click(function() {
     $(".nineteen").fadeOut();
     $(".twenty-five").fadeIn();
+    $("#nineteen").css("border-bottom", "none");
+    $("#twenty-five").css("border-top", "none");
   })
   $("button#r4c2-right").click(function() {
     $(".twenty").fadeOut();
     $(".twenty-one").fadeIn();
+    $("#twenty").css("border-right", "none");
+    $("#twenty-one").css("border-left", "none");
   })
   $("button#r4c2-left").click(function() {
     $(".twenty").fadeOut();
@@ -411,10 +455,14 @@ $(document).ready(function() {
   $("button#r4c3-down").click(function() {
     $(".twenty-one").fadeOut();
     $(".twenty-seven").fadeIn();
+    $("#twenty-one").css("border-bottom", "none");
+    $("#twenty-seven").css("border-top", "none");
   })
   $("button#r4c4-right").click(function() {
     $(".twenty-two").fadeOut();
     $(".twenty-three").fadeIn();
+    $("#twenty-two").css("border-right", "none");
+    $("#twenty-three").css("border-left", "none");
   })
   $("button#r4c4-left").click(function() {
     $(".twenty-two").fadeOut();
@@ -439,6 +487,8 @@ $(document).ready(function() {
   $("button#r4c5-up").click(function() {
     $(".twenty-three").fadeOut();
     $(".seventeen").fadeIn();
+    $("#twenty-three").css("border-top", "none");
+    $("#seventeen").css("border-bottom", "none");
   })
   $("button#r4c5-down").click(function() {
     $(".twenty-three").fadeOut();
@@ -455,10 +505,14 @@ $(document).ready(function() {
   $("button#r4c6-down").click(function() {
     $(".twenty-four").fadeOut();
     $(".thirty").fadeIn();
+    $("#twenty-four").css("border-bottom", "none");
+    $("#thirty").css("border-top", "none");
   })
   $("button#r5c1-right").click(function() {
     $(".twenty-five").fadeOut();
     $(".twenty-six").fadeIn();
+    $("#twenty-five").css("border-right", "none");
+    $("#twenty-six").css("border-left", "none");
   })
   $("button#r5c1-up").click(function() {
     $(".twenty-five").fadeOut();
@@ -479,14 +533,20 @@ $(document).ready(function() {
   $("button#r5c2-up").click(function() {
     $(".twenty-six").fadeOut();
     $(".twenty").fadeIn();
+    $("#twenty-six").css("border-top", "none");
+    $("#twenty").css("border-bottom", "none");
   })
   $("button#r5c2-down").click(function() {
     $(".twenty-six").fadeOut();
     $(".thirty-two").fadeIn();
+    $("#twenty-six").css("border-bottom", "none");
+    $("#thirty-two").css("border-top", "none");
   })
   $("button#r5c3-right").click(function() {
     $(".twenty-seven").fadeOut();
     $(".twenty-eight").fadeIn();
+    $("#twenty-seven").css("border-right", "none");
+    $("#twenty-eight").css("border-left", "none");
   })
   $("button#r5c3-left").click(function() {
     $(".twenty-seven").fadeOut();
@@ -499,10 +559,14 @@ $(document).ready(function() {
   $("button#r5c3-down").click(function() {
     $(".twenty-seven").fadeOut();
     $(".thirty-three").fadeIn();
+    $("#twenty-seven").css("border-bottom", "none");
+    $("#thirty-three").css("border-top", "none");
   })
   $("button#r5c4-right").click(function() {
     $(".twenty-eight").fadeOut();
     $(".twenty-nine").fadeIn();
+    $("#twenty-eight").css("border-right", "none");
+    $("#twenty-nine").css("border-left", "none");
   })
   $("button#r5c4-left").click(function() {
     $(".twenty-eight").fadeOut();
@@ -531,6 +595,8 @@ $(document).ready(function() {
   $("button#r5c5-down").click(function() {
     $(".twenty-nine").fadeOut();
     $(".thirty-five").fadeIn();
+    $("#twenty-nine").css("border-bottom", "none");
+    $("#thirty-five").css("border-top", "none");
   })
   $("button#r5c6-left").click(function() {
     $(".thirty").fadeOut();
@@ -543,6 +609,8 @@ $(document).ready(function() {
   $("button#r5c6-down").click(function() {
     $(".thirty").fadeOut();
     $(".thirty-six").fadeIn();
+    $("#thirty").css("border-bottom", "none");
+    $("#thirty-six").css("border-top", "none");
   })
   $("button#r6c1-right").click(function() {
     $(".thirty-one").fadeOut();
@@ -559,6 +627,8 @@ $(document).ready(function() {
   $("button#r6c2-left").click(function() {
     $(".thirty-two").fadeOut();
     $(".thirty-one").fadeIn();
+    $("#thirty-two").css("border-left", "none");
+    $("#thirty-one").css("border-right", "none");
   })
   $("button#r6c2-up").click(function() {
     $(".thirty-two").fadeOut();
@@ -595,6 +665,8 @@ $(document).ready(function() {
   $("button#r6c5-left").click(function() {
     $(".thirty-five").fadeOut();
     $(".thirty-four").fadeIn();
+    $("#thirty-five").css("border-left", "none");
+    $("#thirty-four").css("border-right", "none");
     $(".win").show();
   })
   $("button#r6c5-up").click(function() {
