@@ -28,3 +28,15 @@ ANSWER: 3
 // Ball Pyramid
 // var puzzle = new Puzzle('How many balls are in the ball pyramid?');
 // var puzzleAnswer = new Answer(30);
+
+// Circle Counting
+// var puzzle = new Puzzle('How many circles do you see?');
+// var puzzleAnswer = new Answer(17);
+
+// Pyramid View
+// var puzzle = new Puzzle('Which image shows the top view of the given pyramid?');
+// var puzzleAnswer = new Answer('c');
+
+// Linked Squares
+// var puzzle = new Puzzle('Which three squares are not linked to any of the others?');
+// var puzzleAnswer = new Answer(17,19,23);
