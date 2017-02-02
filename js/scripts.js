@@ -70,6 +70,8 @@ new Puzzle('The All-Father, Odin, apprears before you. "to continue your voyage,
 // User logic
 $(document).ready(function() {
   function puzzleQuestion(puzzleQuestion) {
+    $('#radioResponse').hide();
+    $('#response').hide();
     $("#puzzle").show();
     $("#map").hide();
     $("#title").text(puzzleQuestion.title);
@@ -84,7 +86,7 @@ $(document).ready(function() {
       if (currentAnswer.compare(correctAnswer)) {
         $('#puzzle').hide();
         $("#response").text("Excellent. You Proceed!");
-        $('#radioResponse').hide();
+        // $('#radioResponse').hide();
         $('#response').show();
         $("#response").delay(2000).fadeOut();
         $('#map').fadeIn(1500);
@@ -110,12 +112,14 @@ $(document).ready(function() {
 
     $("form").submit(function(event) {
       event.preventDefault();
+      $('#radioResponse').hide();
+      $('#response').hide();
       var currentAnswer = new Answer($("input:radio[name=radioChoice]:checked").val());
       var correctAnswer = radioQuestion.questionAnswer;
       if (currentAnswer.compare(correctAnswer)) {
         $('#radioSec').hide();
         $("#radioResponse").text("Excellent. You Proceed!");
-        $('#response').hide();
+        // $('#response').hide();
         $('#radioResponse').show();
         $("#radioResponse").delay(2000).fadeOut();
         $('#map').fadeIn(1500);
