@@ -48,20 +48,41 @@ Answer.prototype.compare = function (currentPuzzle) {
 }
 
 
+// single input puzzles
+new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", '<br>' + "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
 
-new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
+new Puzzle("Docking Spot", "Question: In what dock number is the batur docked?", '<br>' + "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'Benzla', '87');
 
-new Puzzle("Docking Spot", "Question: In what dock number is the faering docked?", "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'benzla', '87');
+new Radio("Boat Maze", "Question: What exit will the batur leaving the harbor?", '<br>' + "<img " + "src='img/boat-maze-compl.png'" + ">", "A", "B","C", "D", '2');
 
-new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
+new Puzzle('All is not as it seems', "True or false: If all Kvinna are 'Hora' and all 'Hora' are 'Bruor', all Kvinna are definitely 'Bruor'?", '<br>' + "<img " + "src='img/vikings.jpg'" + ">", 'Blundra Your Skrappa!', 'true');
 
-new Puzzle("Boat Maze", "Question: What exit will the faering leaving the harbor?", "<img " + "src='img/car-maze.jpg'" + ">", 'Enter', 'c');
-// var puzzleQ2 = new Puzzle('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
+new Puzzle('Ball Pyramid', 'How many knottr make up the pyramid?', '<br>' + "<img " + "src='img/ball-pyramid.jpeg'" + ">", 'Benzla', '30')
+
+// multiple choice puzzles
+new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", '<br>' + "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
+
+// riddles
+new Puzzle('The All-Father, Odin, apprears before you. "to continue your voyage, you much answer the following riddle viking."', "Would that I had now what I had yesterday, find out what that was; mankind it mars, speech it hinders, yet speech it will inspire.", '<br>' + "<img " + "src='img/odin.jpg'" + '>', 'Enter', 'ale');
+
+new Radio("viking Rope", "Viking had a ship, blades, and axe. What was his favorite material to use to make ropes and as the handle of a blade?", '<br>' + "<img " + "src='img/rope.gif'" + '>', "Vine", "Animal Tendon", "Plant fiber", "Strips of strong wood from a specific tree", "1");
+
+new Radio("Lets celebrate!", 'Theres always a long journey ahead for you Viking. Sometimes you have to tell mythological stories and have your favorite drink.', '<br>' + "<img " + "src='img/hornmead.jpg'" + '>', "Mead from honey", "Peaty whiskey made from barley", "An Ale", "Milk", "0");
+
+new Radio('Kneeling', 'Viking is devout. Sometimes he needs strength in his times away from family at sea. Who can viking call for guidance?', '<br>' + "<img " + "src='img/magni.jpeg'" + '>', 'Thor', 'Loki', 'Odin', 'Magni', "3");
+
+new Puzzle("Block Counting", "Arrggh! A section of Vikings longhouse was destroyed by a storm. Viking needs to rebuild the section with his sons. How many rocks are in his pile?", '<br>' + "<img " + "src='img/block-counting.png'" + '>', 'Enter', "66");
+
+new Radio("Pyramid Thatch", "The roof of Viking's longhouse is leaking. To orient his thatch correctly, which image shows the top view of his pyramid style thatch?", '<br>' + "<img " + "src='img/pyramid-view.jpeg'" + '>', "A)", "B)", "C)", "D)", "2");
+
+new Puzzle("Circle Counting", "Ughh, too much mead for you viking. Returning home and at the door looking at the doorknob. How many circles do you see?", '<br>' + "<img " + "src='img/circle-counting.jpeg'" + '>', "Honey I'm Home", "17");
 
 
 // User logic
 $(document).ready(function() {
   function puzzleQuestion(puzzleQuestion) {
+    $('#radioResponse').hide();
+    $('#response').hide();
     $("#puzzle").show();
     $("#map").hide();
     $("#title").text(puzzleQuestion.title);
@@ -76,7 +97,7 @@ $(document).ready(function() {
       if (currentAnswer.compare(correctAnswer)) {
         $('#puzzle').hide();
         $("#response").text("Excellent. You Proceed!");
-        $('#radioResponse').hide();
+        // $('#radioResponse').hide();
         $('#response').show();
         $("#response").delay(2000).fadeOut();
         $('#map').fadeIn(1500);
@@ -102,12 +123,14 @@ $(document).ready(function() {
 
     $("form").submit(function(event) {
       event.preventDefault();
+      $('#radioResponse').hide();
+      $('#response').hide();
       var currentAnswer = new Answer($("input:radio[name=radioChoice]:checked").val());
       var correctAnswer = radioQuestion.questionAnswer;
       if (currentAnswer.compare(correctAnswer)) {
         $('#radioSec').hide();
         $("#radioResponse").text("Excellent. You Proceed!");
-        $('#response').hide();
+        // $('#response').hide();
         $('#radioResponse').show();
         $("#radioResponse").delay(2000).fadeOut();
         $('#map').fadeIn(1500);
@@ -124,7 +147,7 @@ $(document).ready(function() {
   $("button#r1c1-right").click(function () {
 
    $(".one").fadeOut()
-   radioQuestion(randomRadio());
+   puzzleQuestion(randomPuzzle());
    $(".two").fadeIn()
    $("#one").css("border-right", "none");
    $("#two").css("border-left", "none");
@@ -149,13 +172,13 @@ $(document).ready(function() {
  })
  $("button#r1c2-down").click(function() {
    $(".two").fadeOut();
-   puzzleQuestion(randomPuzzle());
    $(".eight").fadeIn();
    $("#two").css("border-bottom", "none");
    $("#eight").css("border-top", "none");
  })
  $("button#r1c3-right").click(function() {
    $(".three").fadeOut();
+   radioQuestion(randomRadio());
    $(".four").fadeIn();
    $("#three").css("border-right", "none");
    $("#four").css("border-left", "none");
@@ -212,6 +235,7 @@ $(document).ready(function() {
  })
  $("button#r2c1-up").click(function() {
    $(".seven").fadeOut();
+   radioQuestion(randomRadio());
    $(".one").fadeIn();
  })
  $("button#r2c1-down").click(function() {
@@ -232,6 +256,7 @@ $(document).ready(function() {
  })
  $("button#r2c2-down").click(function() {
    $(".eight").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".fourteen").fadeIn();
    $("#eight").css("border-bottom", "none");
    $("#fourteen").css("border-top", "none");
@@ -250,6 +275,7 @@ $(document).ready(function() {
  })
  $("button#r2c3-down").click(function() {
    $(".nine").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".fifteen").fadeIn();
    $("#nine").css("border-bottom", "none");
    $("#fifteen").css("border-top", "none");
@@ -296,6 +322,7 @@ $(document).ready(function() {
  })
  $("button#r2c6-up").click(function() {
    $(".twelve").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".six").fadeIn();
    $("#twelve").css("border-top", "none");
    $("#six").css("border-bottom", "none");
@@ -314,6 +341,7 @@ $(document).ready(function() {
  })
  $("button#r3c1-down").click(function() {
    $(".thirteen").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".nineteen").fadeIn();
    $("#thirteen").css("border-bottom", "none");
    $("#nineteen").css("border-top", "none");
@@ -368,6 +396,7 @@ $(document).ready(function() {
  })
  $("button#r3c4-down").click(function() {
    $(".sixteen").fadeOut();
+   radioQuestion(randomRadio());
    $(".twenty-two").fadeIn();
    $("#sixteen").css("border-bottom", "none");
    $("#twenty-two").css("border-top", "none");
@@ -454,6 +483,7 @@ $(document).ready(function() {
  })
  $("button#r4c3-down").click(function() {
    $(".twenty-one").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".twenty-seven").fadeIn();
    $("#twenty-one").css("border-bottom", "none");
    $("#twenty-seven").css("border-top", "none");
@@ -486,6 +516,7 @@ $(document).ready(function() {
  })
  $("button#r4c5-up").click(function() {
    $(".twenty-three").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".seventeen").fadeIn();
    $("#twenty-three").css("border-top", "none");
    $("#seventeen").css("border-bottom", "none");
@@ -504,12 +535,14 @@ $(document).ready(function() {
  })
  $("button#r4c6-down").click(function() {
    $(".twenty-four").fadeOut();
+   radioQuestion(randomRadio());
    $(".thirty").fadeIn();
    $("#twenty-four").css("border-bottom", "none");
    $("#thirty").css("border-top", "none");
  })
  $("button#r5c1-right").click(function() {
    $(".twenty-five").fadeOut();
+   radioQuestion(randomRadio());
    $(".twenty-six").fadeIn();
    $("#twenty-five").css("border-right", "none");
    $("#twenty-six").css("border-left", "none");
@@ -664,6 +697,7 @@ $(document).ready(function() {
  })
  $("button#r6c5-left").click(function() {
    $(".thirty-five").fadeOut();
+   puzzleQuestion(randomPuzzle());
    $(".thirty-four").fadeIn();
    $("#thirty-five").css("border-left", "none");
    $("#thirty-four").css("border-right", "none");
