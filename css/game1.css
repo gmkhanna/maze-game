@@ -1,0 +1,15 @@
+
+/*#ctx {
+  border: 3px solid #000000;
+  position: absolute;
+  margin-left: -382px;
+  left: 50%;
+  background-color: #192642;
+}*/
+
+#hero {
+  background: #6d5118;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}

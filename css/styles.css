@@ -1,21 +1,48 @@
-#puzzle1Title {
-  cursor: pointer;
-
+#map {
+  background-image: url('../img/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
+.jumbotron {
+  text-align: right;
+  background-color: #373028;
+  color: #000000;
+  background-image: url(../img/snow.gif);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
 }
 
-#puzzle1Title:hover {
-  text-decoration: underline;
-  color: #0088cc;
-  display: block;
+.row {
+  margin: 0px;
 }
 
-#puzzle2Title {
-  cursor: pointer;
-
+img {
+  width: 70%;
+  height: 70%;
 }
 
-#puzzle2Title:hover {
-  text-decoration: underline;
-  color: #0088cc;
-  display: block;
+#treasure {
+  width: 100%;
+  height: 100%;
+}
+
+.col-md-2 {
+  border: solid black 3px;
+  text-align: center;
+  height: 150px;
+}
+
+.two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .eighteen, .nineteen, .twenty, .twenty-one, .twenty-two, .twenty-three, .twenty-four, .twenty-five, .twenty-six, .twenty-seven, .twenty-eight, .twenty-nine, .thirty, .thirty-one, .thirty-two, .thirty-three, .thirty-four, .thirty-five, .thirty-six {
+  display: none;
+}
+
+#puzzle, .win {
+  display: none;
+}
+#response {
+  display: none;
+}
+
+#radioSec {
+  display: none;
 }
