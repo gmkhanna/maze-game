@@ -48,16 +48,24 @@ Answer.prototype.compare = function (currentPuzzle) {
 }
 
 
+// single input puzzles
+new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", '<br>' + "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
 
-new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
+new Puzzle("Docking Spot", "Question: In what dock number is the bátur docked?", '<br>' + "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'Benzla', '87');
 
-new Puzzle("Docking Spot", "Question: In what dock number is the faering docked?", "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'benzla', '87');
+new Puzzle("Boat Maze", "Question: What exit will the bátur leaving the harbor?", '<br>' + "<img " + "src='img/car-maze.jpg'" + ">", 'Enter', 'c');
 
-new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
+new Puzzle('All is not as it seems', "True or false: If all Kvinna are 'Hóra' and all 'Hóra' are 'Brúðr', all Kvinna are definitely 'Brúðr'?", '<br>' + "<img " + "src='img/vikings.jpg'" + ">", 'Enter', 'true');
 
-new Puzzle("Boat Maze", "Question: What exit will the faering leaving the harbor?", "<img " + "src='img/car-maze.jpg'" + ">", 'Enter', 'c');
-// var puzzleQ2 = new Puzzle('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
+new Puzzle('What the circles!?','How many circles do you see?', '<br>' + "<img " + "src='img/circle-counting.jpeg'" + ">", 'Lÿjask', '17');
 
+new Puzzle('Ball Pyramid', 'How many knottr make up the pyramid?', '<br>' + "<img " + "src='img/ball-pyramid.jpeg'" + ">", 'Enter', '30')
+
+// multiple choice puzzles
+new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", '<br>' + "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
+
+// riddles
+new Puzzle('The All-Father, Odin, apprears before you. "to continue your voyage, you much answer the following riddle viking."', "Would that I had now what I had yesterday, find out what that was; mankind it mars, speech it hinders, yet speech it will inspire.", '<br>' + "<img " + "src='img/odin.jpg'" + '>', 'Enter', 'ale')
 
 // User logic
 $(document).ready(function() {
@@ -124,7 +132,7 @@ $(document).ready(function() {
   $("button#r1c1-right").click(function () {
 
    $(".one").fadeOut()
-   radioQuestion(randomRadio());
+   puzzleQuestion(randomPuzzle());
    $(".two").fadeIn()
    $("#one").css("border-right", "none");
    $("#two").css("border-left", "none");
@@ -149,7 +157,7 @@ $(document).ready(function() {
  })
  $("button#r1c2-down").click(function() {
    $(".two").fadeOut();
-   puzzleQuestion(randomPuzzle());
+   radioQuestion(randomRadio());
    $(".eight").fadeIn();
    $("#two").css("border-bottom", "none");
    $("#eight").css("border-top", "none");
