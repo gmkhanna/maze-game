@@ -5,7 +5,6 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="js/game1.js"></script>
   <title>Maze Puzzle</title>
 </head>
 <body>
@@ -13,6 +12,12 @@
   <div class="container">
     <div class="row jumbotron">
       <h1>Puzzle Maze</h1>
+    </div>
+    <div class="row">
+      <h3 id="response"></h3>
+    </div>
+    <div class="row">
+      <h3 id="radioResponse"></h3>
     </div>
 
     <div class="row" id="puzzle">
@@ -25,8 +30,35 @@
           <button class="btn btn-primary" type="submit" name="button">Klubba</button>
         </div>
       </form>
-      <h3 id="response"></h3>
     </div>
+
+    <div class="row" id="radioSec">
+      <h2 id="radioTitle"></h2>
+      <h4 id="radioQuestion"></h4>
+      <form>
+        <div class="radio">
+          <label>
+          <input class="label0" type="radio" name="radioChoice" value="0"><span class="label0"></span>
+        </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input class="label1" type="radio" name="radioChoice" value="1"><span class="label1"></span>
+        </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input class="label2" type="radio" name="radioChoice" value="2"><span class="label2"></span>
+        </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input class="label3" type="radio" name="radioChoice" value="3"><span class="label3"></span>
+        </label>
+        </div>
+      </form>
+    </div>
+
 
     <!-- <div class="row" id="puzzle2">
       <h2 id="puzzle2Title">You're Not My Laddie!</h2>
@@ -349,12 +381,6 @@
       </div>
     </div>
     </div>
-
-<!-- this section encompasses the video game starting here ==========>>>>> -->
-
-
-
-  <!-- Game section ends here <<<<<<<<<<<<=========== -->
 
   </div>
 

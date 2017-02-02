@@ -1,4 +1,5 @@
 // Business logic
+var storedPuzzles = [];
 
 function Puzzle(title, question, image, label, answer) {
   this.title = title;
@@ -6,6 +7,15 @@ function Puzzle(title, question, image, label, answer) {
   this.image = image;
   this.questionLabel = label;
   this.questionAnswer = answer;
+  storedPuzzles.push(this);
+}
+
+var pickedPuzzle;
+
+function randomPuzzle() {
+  console.log(storedPuzzles);
+  pickedPuzzle = storedPuzzles[Math.floor(Math.random() * storedPuzzles.length)];
+  return pickedPuzzle;
 }
 
 function Answer(answer) {
@@ -13,45 +23,96 @@ function Answer(answer) {
 }
 
 Answer.prototype.compare = function (currentPuzzle) {
-  if (this.userAnswer === currentPuzzle.questionAnswer) {
+  if (this.userAnswer === currentPuzzle) {
     return true;
   } else {
     return false;
   }
 }
 
-var puzzleQ1 = new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", 3);
+function Radio(title, question, image, label0, label1, label2, label3, answer) {
+  this.title = title;
+  this.question = question;
+  this.image = image;
+  this.label0 = label0;
+  this.label1 = label1;
+  this.label2 = label2;
+  this.label3 = label3;
+  this.questionAnswer = answer;
+  storedPuzzles.push(this);
+}
 
+
+var puzzleQ1 = new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in the empty triangle?", "<img " + "src='img/numTriangle.jpg'" + ">", "Blundra Your Skrappa!", '3');
+
+var puzzleQ4 = new Puzzle("Docking Spot", "Question: In what dock number is the faering docked?", "<img " + "src='img/parkingspacepuzzle.png'" + ">", 'benzla', '87');
+
+var puzzleQ3 = new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
 // var puzzleQ2 = new Puzzle('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?', "<img " + "src='img/oldPirate.png'" + ">")
 
 // User logic
 $(document).ready(function() {
   function puzzleQuestion(puzzleQuestion) {
     $("#puzzle").show();
+    $('#map').hide();
     $("#title").text(puzzleQuestion.title);
-    console.log(puzzleQuestion.title);
     $("#question").text(puzzleQuestion.question);
     $("#question").append(puzzleQuestion.image);
     $("#label").text(puzzleQuestion.questionLabel);
 
     $("form").submit(function(event) {
       event.preventDefault();
-      var currentAnswer = new Answer(parseInt($("#answer").val()));
-
-      if (currentAnswer.compare(puzzleQ1)) {
-        $("#puzzle").delay(2000).fadeOut();
-        $(".two").fadeIn();
+      var currentAnswer = new Answer($("#answer").val());
+      var correctAnswer = puzzleQuestion.questionAnswer;
+      if (currentAnswer.compare(correctAnswer)) {
+        $('#puzzle').hide();
         $("#response").text("Excellent. You Proceed!");
-
+        $('#response').show();
+        $("#response").delay(2000).fadeOut();
+        $('#map').show();
       } else {
         $("#response").text("Sorry Viking. You cannot proceed with that response.");
+        $('#response').show();
+        $("#response").delay(2000).fadeOut();
       }
     });
   }
-  $("form").submit(function(event) {
-    event.preventDefault();
 
-  });
+  function radioQuestion(radioQuestion) {
+    $("#radioSec").show();
+    $("#radioTitle").text(radioQuestion.title);
+    console.log(radioQuestion.title);
+    $("#radioQuestion").text(radioQuestion.question);
+    $("#radioQuestion").append(radioQuestion.image);
+    $(".label0").append(radioQuestion.label0);
+    $(".label1").append(radioQuestion.label1);
+    $(".label2").append(radioQuestion.label2);
+    $(".label3").append(radioQuestion.label3);
+
+    $("form").submit(function(event) {
+      event.preventDefault();
+      var currentAnswer = new Answer($("input:radio[name=radioChoice]:checked").val());
+      var correctAnswer = radioQuestion.questionAnswer;
+      if (currentAnswer.compare(correctAnswer)) {
+        $('#radioSec').hide();
+        $("#radioResponse").text("Excellent. You Proceed!");
+        $('#radioResponse').show();
+        $("#radioResponse").delay(2000).fadeOut();
+        $('#map').show();
+      } else {
+        $("#radioResponse").text("Sorry Viking. You cannot proceed with that response.");
+        $('#radioResponse').show();
+        $("#radioResponse").delay(2000).fadeOut();
+      }
+    });
+  }
+//     if (currentAnswer.compare(correctAnswer)) {
+//       $("#radioSec").delay(2000).fadeOut();
+//       $(".two").fadeIn();
+//       $("#radioResponse").text("Excellent. You Proceed!");
+//     } else {
+//       $("#radioResponse").text("Sorry Viking. You cannot proceed with that response.");
+//     }
 
   // $("#puzzle2Title").click(function() {
   //   $("#puzzle2Start").text(puzzleQ2.puzQuestion());
@@ -62,7 +123,8 @@ $(document).ready(function() {
 
   $("button#r1c1-right").click(function () {
     $(".one").fadeOut();
-    return puzzleQuestion(puzzleQ1);
+    radioQuestion(randomPuzzle());
+    $(".two").fadeIn();
 
   });
 
@@ -548,4 +610,4 @@ $(document).ready(function() {
     $(".thirty").fadeIn();
   })
 
-})
+})  // <<<==This is the parentheses and curly bracket for the doc ready function!!

@@ -39,5 +39,10 @@ img {
 #puzzle, .win {
   display: none;
 }
+#response {
+  display: none;
+}
 
-/*Game CSS Section //*/
+#radioSec {
+  display: none;
+}
