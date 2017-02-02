@@ -80,7 +80,7 @@ new Radio("Animal Strength", "Viking is going through a relentless battle, but t
 
 new Radio("Intimidation", "The lines of battle are severe. Viking needs as much strategy to intimidate his opponenet. How does he do so?", '<br>' + "<img " + "src='img/warcry.jpg'" + '>', "Dye his body", "File his teeth into sharp fangs as extra weapons", "Shaved his head", "Clipped his ears", "0");
 
-new Radio("Fight Diet", "In full battle preparation, viking eats this to be under the optimum influence (this has not been found in actual evidence, but there are notes of it in writings).", '<br>' + "<img " + "src='img/vikingImages.jpg'" + '>', "Raw Meat", "Mushrooms", "Fermented Grapes", "Animal Insides", "2");
+new Radio("Fight Diet", "In full battle preparation, viking eats this to be under the optimum influence (this has not been found in actual evidence, but there are notes of it in writings).", '<br>' + "<img " + "src='img/vikingImages.jpg'" + '>', "Raw Meat", "Mushrooms", "Fermented Grapes", "Animal Insides", "1");
 
 
 // User logic
@@ -102,11 +102,9 @@ $(document).ready(function() {
       if (currentAnswer.compare(correctAnswer)) {
         $('#puzzle').hide();
         $("#response").text("Excellent. You Proceed!");
-        // $('#radioResponse').hide();
         $('#response').show();
         $("#response").delay(2000).fadeOut();
         $('#map').fadeIn(1500);
-
       } else {
         $("#response").text("Sorry Viking. You cannot proceed with that response.");
         $('#response').show();
@@ -135,7 +133,6 @@ $(document).ready(function() {
       if (currentAnswer.compare(correctAnswer)) {
         $('#radioSec').hide();
         $("#radioResponse").text("Excellent. You Proceed!");
-        // $('#response').hide();
         $('#radioResponse').show();
         $("#radioResponse").delay(2000).fadeOut();
         $('#map').fadeIn(1500);
