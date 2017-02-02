@@ -39,6 +39,7 @@ img {
 #puzzle, .win {
   display: none;
 }
+<<<<<<< HEAD
 #response {
   display: none;
 }
@@ -46,3 +47,9 @@ img {
 #radioSec {
   display: none;
 }
+=======
+
+/*#one, #two {
+  border: solid black 3px;
+}*/
+>>>>>>> 5eb9f7f177fdab248369aabddd30a20bf087cdca

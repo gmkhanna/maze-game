@@ -15,3 +15,28 @@ ANSWER: 3
 //
 // var puzzleQ4 = new Question('If all Laddies are Razzies and all Razzies are Maddies, all Laddies are definitely Maddies?')
 // var puzzleAnswer4 = new Answer(BOOLEAN);
+//
+
+// Car Maze
+// var puzzle = new Puzzle('Which pit stop will the car reach?');
+// var puzzleAnswer = new Answer('c');
+
+// Block Counting
+// var puzzle = new Puzzle('How many blocks are in the picture?');
+// var puzzleAnswer = new Answer(66);
+
+// Ball Pyramid
+// var puzzle = new Puzzle('How many balls are in the ball pyramid?');
+// var puzzleAnswer = new Answer(30);
+
+// Circle Counting
+// var puzzle = new Puzzle('How many circles do you see?');
+// var puzzleAnswer = new Answer(17);
+
+// Pyramid View
+// var puzzle = new Puzzle('Which image shows the top view of the given pyramid?');
+// var puzzleAnswer = new Answer('c');
+
+// Linked Squares
+// var puzzle = new Puzzle('Which three squares are not linked to any of the others?');
+// var puzzleAnswer = new Answer(17,19,23);
