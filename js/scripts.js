@@ -53,11 +53,9 @@ new Puzzle("The Bermuda Triangle", "Question: Which number should be placed in t
 
 new Puzzle("Docking Spot", "Question: In what dock number is the bátur docked?", '<br>' + "<img " + "src='img/parkingspacepuzzle.jpg'" + ">", 'Benzla', '87');
 
-new Puzzle("Boat Maze", "Question: What exit will the bátur leaving the harbor?", '<br>' + "<img " + "src='img/car-maze.jpg'" + ">", 'Enter', 'c');
+new Puzzle("Boat Maze", "Question: What exit will the bátur leaving the harbor?", '<br>' + "<img " + "src='img/boat-maze-compl.png'" + ">", 'Enter', 'c');
 
 new Puzzle('All is not as it seems', "True or false: If all Kvinna are 'Hóra' and all 'Hóra' are 'Brúðr', all Kvinna are definitely 'Brúðr'?", '<br>' + "<img " + "src='img/vikings.jpg'" + ">", 'Enter', 'true');
-
-new Puzzle('What the circles!?','How many circles do you see?', '<br>' + "<img " + "src='img/circle-counting.jpeg'" + ">", 'Lÿjask', '17');
 
 new Puzzle('Ball Pyramid', 'How many knottr make up the pyramid?', '<br>' + "<img " + "src='img/ball-pyramid.jpeg'" + ">", 'Enter', '30')
 
@@ -65,7 +63,20 @@ new Puzzle('Ball Pyramid', 'How many knottr make up the pyramid?', '<br>' + "<im
 new Radio("No Food Reserves", "In a voyage to hunt for hide, you depleted your food sources. How can you survive for two days in the wilderness without food?", '<br>' + "<img " + "src='img/sourceFood.jpg'" + '>', "Mushrooms, moss and fungal growth.", "Small, green leafy plants.", "Insects, and small furry animals.", "Grasses and the bark of young trees.", "2");
 
 // riddles
-new Puzzle('The All-Father, Odin, apprears before you. "to continue your voyage, you much answer the following riddle viking."', "Would that I had now what I had yesterday, find out what that was; mankind it mars, speech it hinders, yet speech it will inspire.", '<br>' + "<img " + "src='img/odin.jpg'" + '>', 'Enter', 'ale')
+new Puzzle('The All-Father, Odin, apprears before you. "to continue your voyage, you much answer the following riddle viking."', "Would that I had now what I had yesterday, find out what that was; mankind it mars, speech it hinders, yet speech it will inspire.", '<br>' + "<img " + "src='img/odin.jpg'" + '>', 'Enter', 'ale');
+
+new Radio("viking Rope", "Viking had a ship, blades, and axe. What was his favorite material to use to make ropes and as the handle of a blade?", '<br>' + "<img " + "src='img/rope.gif'" + '>', "Vine", "Animal Tendon", "Plant fiber", "Strips of strong wood from a specific tree", "1");
+
+new Radio("Lets celebrate!", 'Theres always a long journey ahead for you Viking. Sometimes you have to tell mythological stories and have your favorite drink.', '<br>' + "<img " + "src='img/hornmead.jpg'" + '>', "Mead from honey", "Peaty whiskey made from barley", "An Ale", "Milk", "0");
+
+new Radio('Kneeling', 'Viking is devout. Sometimes he needs strength in his times away from family at sea. Who can viking call for guidance?', '<br>' + "<img " + "src='img/magni.jpg'" + '>', 'Thor', 'Loki', 'Odin', 'Magni', "3");
+
+new Puzzle("Block Counting", "Arrggh! A section of Vikings longhouse was destroyed by a storm. Viking needs to rebuild the section with his sons. How many rocks are in his pile?", '<br>' + "<img " + "src='img/block-counting.png'" + '>', 'Enter', "66");
+
+new Radio("Pyramid Thatch", "The roof of Viking's longhouse is leaking. To orient his thatch correctly, which image shows the top view of his pyramid style thatch?", '<br>' + "<img " + "src='img/pyramid-view.jpg'" + '>', "A)", "B)", "C)", "D)", "2");
+
+new Puzzle("Circle Counting", "Ughh, too much mead for you viking. Returning home and at the door looking at the doorknob. How many circles do you see?", '<br>' + "<img " + "src='img/circle-counting.jpeg'" + '>', "Honey I'm Home", "17");
+
 
 // User logic
 $(document).ready(function() {
